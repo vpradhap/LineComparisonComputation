@@ -40,14 +40,18 @@ namespace LineComparisonComputation
             double Line2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
             Console.WriteLine("Length of the Line2 = " +Line2);
             
-            //Checking Equality of Two Lines
-            if (Line1 == Line2)
+            //Comparison of Two Lines
+            if (Line1 > Line2)
             {
-                Console.WriteLine("\nBoth Lines are Equal");
+                Console.WriteLine("\nLine1 is Greater than Line2");
+            }
+            else if (Line1 < Line2)
+            {
+                Console.WriteLine("\nLine2 is Greater than Line1");
             }
             else
             {
-                Console.WriteLine("\nBoth Lines are not Equal");
+                Console.WriteLine("\nLine1 is Equal to Line2");
             }
         }
     }
