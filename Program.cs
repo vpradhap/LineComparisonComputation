@@ -1,1 +1,5 @@
-﻿Console.WriteLine("Welcome to Line Comparison Computation");
+﻿using LineComparisonComputation;
+
+Console.WriteLine("Welcome to Line Comparison Computation");
+LineComparison obj = new LineComparison();
+obj.LineLength();
