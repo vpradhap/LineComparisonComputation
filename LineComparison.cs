@@ -8,7 +8,8 @@ namespace LineComparisonComputation
 {
     public class LineComparison
     {
-        public void LineLengthComparison()
+        double line1,line2;
+        public void LineLength()
         {
             // x,y Coordinates User Input for Line1 & Line2 
             Console.WriteLine("\nEnter x,y Coordinates for a Line1");
@@ -35,24 +36,24 @@ namespace LineComparisonComputation
             Console.WriteLine("Line2\tFirst Point ({0},{1}) \tSecond Point ({2},{3})", x3, y3, x4, y4);
             
             //Calculation to find Length of Two Lines
-            double Line1 = Math.Sqrt( Math.Pow((x2 - x1) , 2) +  Math.Pow((y2 - y1) , 2) );
-            Console.WriteLine("\nLength of the Line1 = " +Line1);
-            double Line2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
-            Console.WriteLine("Length of the Line2 = " +Line2);
-            
+            line1 = Math.Sqrt( Math.Pow((x2 - x1) , 2) +  Math.Pow((y2 - y1) , 2) );
+            Console.WriteLine("\nLength of the Line1 = " +line1);
+            line2 = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
+            Console.WriteLine("Length of the Line2 = " +line2);
+        }
+        public void Equality()
+        {
+            //Equality of Two Lines
+            Console.Write("\n\tLine1 is Equal to Line2 : ");
+            Console.WriteLine(line1.Equals(line2));
+        }
+        public void Comparison()
+        {
             //Comparison of Two Lines
-            if (Line1 > Line2)
-            {
-                Console.WriteLine("\nLine1 is Greater than Line2");
-            }
-            else if (Line1 < Line2)
-            {
-                Console.WriteLine("\nLine2 is Greater than Line1");
-            }
-            else
-            {
-                Console.WriteLine("\nLine1 is Equal to Line2");
-            }
+            Console.WriteLine("\n\t\t<<<<<<<<<<  "+line1.CompareTo(line2)+"  >>>>>>>>>>");
+            Console.WriteLine("\nIf  ( 0 )  Line1 is Equal to Line2");
+            Console.WriteLine("\nIf  ( 1 )  Line1 is Greater Than Line2");
+            Console.WriteLine("\nIf  ( -1 )  Line1 is Lesser Than Line2");
         }
     }
 }
